@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     brand: "MacBook",
-    title: "MacBook Pro 14\" - Advanced M3 Chip Performance",
+    title: "MacBook Pro 14 - Advanced M3 Chip Performance",
     subtext: "Designed for developers, creators, and professionals needing ultimate battery life.",
     price: 1290,
     image: "images/p1.jpg"
