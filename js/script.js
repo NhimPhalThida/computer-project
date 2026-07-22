@@ -48,28 +48,28 @@ const products = [
     image:  "images/p6.jpg"
   },
   {
-    id: 4,
+    id: 7,
     brand: "MacBook",
     title: "MacBook Air 13\" - Ultra thin with M3 Power",
     subtext: "Superlight and fast. Ideal for students and on-the-go productivity.",
     price: 799,
-    image: "images/p4.jpg"
+    image: "images/m2.jpg"
   },
   {
-    id: 5,
+    id: 8,
     brand: "Dell",
     title: "Dell Inspiron 15 - Daily Study and Homework Assistant",
     subtext: "Equipped with fast charging options and anti-glare screen display panels.",
     price: 450,
-    image:  "images/p5.jpg"
+    image:  "images/d5.jpg"
   },
   {
-    id: 6,
+    id: 9,
     brand: "HP",
     title: "HP Pavilion Plus 14 - Advanced OLED Visual Elegance",
     subtext: "Featuring bright HDR standard screens and quick multi-core cooling systems.",
     price: 680,
-    image:  "images/p6.jpg"
+    image:  "images/m6.jpg"
   },
 ];
 
@@ -186,25 +186,15 @@ function setupEventListeners() {
   }
 }
 
-// Add Item to Cart and show interactive Toast Notification
+// Add Item to Cart
 function handleAddToCart(e) {
   const productId = parseInt(e.target.getAttribute("data-id"));
   const product = products.find(p => p.id === productId);
 
   if (product) {
-    cartCount++;
-    cartBadge.textContent = cartCount;
-    cartBadge.classList.remove("d-none"); // make sure badge is visible
-
-    // Show custom Toast Notification
-    cartToast.textContent = `Added "${product.brand}" to your cart!`;
-    cartToast.style.display = "block";
-    
-    // Auto fadeout after 2 seconds
-    setTimeout(() => {
-      cartToast.style.display = "none";
-    }, 2000);
+    window.addToCart(product);
   }
 }
+
 
 

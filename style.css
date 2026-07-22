@@ -530,8 +530,6 @@ body {
 
 }
 
-
-
 .text-danger {
   color: #ff5a5f !important;
 }
@@ -549,3 +547,167 @@ a {
 .bi-telegram:hover {
   color: #ff5a5f;
 }
+
+/* Shopping Cart UX/UI  */
+.btn-outline-checkout {
+  border: 2px solid var(--primary-purple) !important;
+  color: var(--primary-purple) !important;
+  background-color: transparent !important;
+  font-weight: 500;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.btn-outline-checkout:hover {
+  background-color: var(--primary-purple) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+}
+
+.btn-qty {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  background-color: #fff;
+  color: var(--text-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-qty:hover {
+  background-color: var(--bg-lavender);
+  border-color: var(--card-border-purple) !important;
+  color: var(--primary-purple);
+}
+
+.cart-item {
+  transition: var(--transition);
+}
+
+.cart-item:hover {
+  background-color: rgba(139, 92, 246, 0.02);
+}
+
+.bi-trash3 {
+  transition: var(--transition);
+}
+
+.bi-trash3:hover {
+  color: #ff3838 !important;
+  transform: scale(1.18);
+}
+
+/* Checkout Success Modal Styles */
+.checkout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.checkout-modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.checkout-modal-card {
+  background-color: #fff;
+  width: 90%;
+  max-width: 380px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transform: translateY(30px);
+  transition: transform 0.3s ease;
+}
+
+.checkout-modal-overlay.show .checkout-modal-card {
+  transform: translateY(0);
+}
+
+.success-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.success-icon-outer {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e2e8f0; /* light grey outer ring */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon-inner {
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background-color: #38a169; /* green circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.checkout-modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f1e24;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.checkout-modal-desc {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-back-home {
+  width: 100%;
+  background-color: #ffeb3b; /* bright yellow */
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-back-home:hover {
+  background-color: #fdd835; /* slightly darker yellow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(253, 216, 53, 0.3);
+}
+
+
+

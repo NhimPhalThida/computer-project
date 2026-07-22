@@ -210,25 +210,15 @@ function setupEventListeners() {
   }
 }
 
-// Add Item to Cart and show interactive Toast Notification
+// Add Item to Cart
 function handleAddToCart(e) {
   const productId = parseInt(e.target.getAttribute("data-id"));
   const product = products.find(p => p.id === productId);
 
   if (product) {
-    cartCount++;
-    cartBadge.textContent = cartCount;
-    cartBadge.classList.remove("d-none"); // make sure badge is visible
-
-    // Show custom Toast Notification
-    cartToast.textContent = `Added "${product.brand}" to your cart!`;
-    cartToast.style.display = "block";
-    
-    // Auto fadeout after 2 seconds
-    setTimeout(() => {
-      cartToast.style.display = "none";
-    }, 2000);
+    window.addToCart(product);
   }
 }
+
 
 
