@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     brand: "MacBook",
-    title: "MacBook Pro 14\" - Advanced M3 Chip Performance",
+    title: "MacBook Pro 14  - Advanced M3 Chip Performance",
     subtext: "Designed for developers, creators, and professionals needing ultimate battery life.",
     price: 1290,
     image: "images/p1.jpg"
@@ -26,7 +26,7 @@ const products = [
   {
     id: 4,
     brand: "MacBook",
-    title: "MacBook Air 13\" - Ultra thin with M3 Power",
+    title: "MacBook Air 13 - Ultra thin with M3 Power",
     subtext: "Superlight and fast. Ideal for students and on-the-go productivity.",
     price: 799,
     image: "images/m6.jpg"
@@ -50,7 +50,7 @@ const products = [
   {
     id: 7,
     brand: "MacBook",
-    title: "MacBook Air 13\" - Ultra thin with M3 Power",
+    title: "MacBook Air 13 - Ultra thin with M3 Power",
     subtext: "Superlight and fast. Ideal for students and on-the-go productivity.",
     price: 799,
     image: "images/m4.jpg"
@@ -74,7 +74,7 @@ const products = [
   {
     id: 10,
     brand: "MacBook",
-    title: "MacBook Air 13\" - Ultra thin with M3 Power",
+    title: "MacBook Air 13 - Ultra thin with M3 Power",
     subtext: "Superlight and fast. Ideal for students and on-the-go productivity.",
     price: 799,
     image: "images/p4.jpg"

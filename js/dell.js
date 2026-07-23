@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     brand: "dell",
-    title: "Dell Pro 14\" - Advanced M3 Chip Performance",
+    title: "Dell Pro 14 - Advanced M3 Chip Performance",
     subtext: "Designed for developers, creators, and professionals needing ultimate battery life.",
     price: 1290,
     image: "images/d1.jpg"
