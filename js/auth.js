@@ -17,7 +17,7 @@ window.logoutUser = function () {
   window.location.reload();
 };
 
-// ---------- Dropdown styling (injected once, no style.css edits needed) ----------
+//  Dropdown styling (injected once, no style.css edits needed) 
 function injectDropdownStyles() {
   if (document.getElementById('auth-dropdown-styles')) return;
   const style = document.createElement('style');
@@ -78,7 +78,7 @@ function buildDropdownContent(container) {
   const user = window.getCurrentUser();
   if (user) {
     container.innerHTML = `
-      <div class="pd-greeting">Hi, ${user.name || 'there'} 👋</div>
+      <div class="pd-greeting">Hi, ${user.name || 'there'}</div>
       <div class="pd-sub">${user.contact || ''}</div>
       <a href="profile.html" class="pd-btn pd-btn-solid">My Profile</a>
       <button type="button" class="pd-btn pd-btn-outline" id="pd-logout-btn">Logout</button>
@@ -96,7 +96,7 @@ function buildDropdownContent(container) {
   }
 }
 
-// ---------- Header profile button -> dropdown ----------
+// Header profile button 
 function initProfileMenu() {
   const btn = document.getElementById('btn-profile');
   if (!btn) return;
@@ -168,7 +168,7 @@ function hideFieldSuccess(elId) {
   if (el) el.classList.add('d-none');
 }
 
-// ---------- Login form (login.html) ----------
+// Login form 
 function initLoginForm() {
   const form = document.getElementById('login-form');
   if (!form) return;
@@ -201,7 +201,7 @@ function initLoginForm() {
   });
 }
 
-// ---------- Signup form (signup.html) ----------
+// Signup form 
 function initSignupForm() {
   const form = document.getElementById('signup-form');
   if (!form) return;
@@ -240,7 +240,7 @@ function initSignupForm() {
   });
 }
 
-// ---------- Profile page (profile.html) ----------
+//  Profile page
 function initProfilePage() {
   const form = document.getElementById('profile-form');
   if (!form) return;
