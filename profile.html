@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - CP-Shop</title>
+  <meta name="description" content="Manage your CP-Shop account details.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-page {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 15px;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 460px;
+      background: #fff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+    .auth-blob {
+      height: 160px;
+      background: linear-gradient(135deg, var(--primary-purple, #8b5cf6) 0%, #ffffff 85%);
+      border-bottom-right-radius: 120px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 0 18px 32px;
+    }
+    .profile-avatar {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--primary-purple, #8b5cf6);
+      font-weight: 700;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    .auth-body {
+      padding: 24px 32px 36px;
+    }
+    .auth-title {
+      font-weight: 700;
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .auth-subtext {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .auth-field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1.5px solid #e5e5e5;
+      border-radius: 50px;
+      padding: 12px 18px;
+      margin-bottom: 16px;
+    }
+    .auth-field input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 0.95rem;
+      background: transparent;
+    }
+    .auth-error {
+      font-size: 0.85rem;
+      color: #dc3545;
+      margin-bottom: 8px;
+    }
+    .auth-success {
+      font-size: 0.85rem;
+      color: #198754;
+      margin-bottom: 8px;
+    }
+    .auth-submit-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 22px;
+    }
+    .auth-btn {
+      background: var(--primary-purple, #8b5cf6);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    .auth-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+  <div class="container py-2">
+    <header class="navbar navbar-expand-lg navbar-light custom-header fixed-top">
+      <a class="navbar-brand ms-3" href="index.html">
+        <img src="images/logo.png" alt="CP-Shop Logo" width="45" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Brand</a></li>
+          <li class="nav-item"><a class="nav-link" href="product-page.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="icon-actions">
+          <button class="action-btn" id="btn-cart" aria-label="Shopping Cart">
+            <i class="bi bi-cart3"></i>
+            <span id="cart-badge" class="cart-badge d-none">0</span>
+          </button>
+          <button class="action-btn" id="btn-profile" aria-label="User Profile">
+            <i class="bi bi-person-circle"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+    <div class="auth-page">
+      <div class="auth-card">
+        <div class="auth-blob">
+          <div class="text-center">
+            <img
+                id="profile-image"
+                src="images/default-profile.png"
+                alt="Profile"
+                class="profile-avatar-img"
+            >
+        
+            <label for="upload-image" class="btn btn-outline-primary btn-sm mt-3">
+                <i class="bi bi-camera"></i> Change Photo
+            </label>
+        
+            <input
+                type="file"
+                id="upload-image"
+                accept="image/*"
+                hidden
+            >
+        </div>
+        </div>
+        <div class="auth-body">
+          <h1 class="auth-title">My Profile</h1>
+          <p class="auth-subtext">Update your account details below.</p>
+
+          <form id="profile-form" novalidate>
+            <div class="auth-field">
+              <input type="text" id="profile-name" placeholder="Name">
+            </div>
+            <div class="auth-field">
+              <input type="text" id="profile-contact" placeholder="Email or phone">
+            </div>
+            <div class="auth-field">
+              <input type="password" id="profile-password" placeholder="New password (leave blank to keep current)" autocomplete="new-password">
+            </div>
+
+            <div id="profile-error" class="auth-error d-none"></div>
+            <div id="profile-success" class="auth-success d-none"></div>
+
+            <div class="auth-submit-row">
+              <button type="submit" class="auth-btn">Save Changes <i class="bi bi-check2"></i></button>
+            </div>
+          </form>
+
+          <div class="text-center mt-3">
+            <button type="button" class="btn btn-link text-danger text-decoration-none" id="profile-logout-btn">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
