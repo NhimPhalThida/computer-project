@@ -121,15 +121,23 @@ function renderProducts() {
   }
 
   filteredProducts.forEach(product => {
+    const detailURL = `product-detail.html?brand=${encodeURIComponent(product.brand.toLowerCase())}&id=${product.id}&title=${encodeURIComponent(product.title)}`;
+
     const cardHTML = `
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="product-card" data-aos="fade-up">
-          <div class="product-img-wrapper">
-            <img src="${product.image}" alt="${product.title}" onerror="this.src='https://placehold.co/300x200?text=Laptop'">
-          </div>
+          <a href="${detailURL}" class="product-card-link text-decoration-none text-dark">
+            <div class="product-img-wrapper">
+              <img src="${product.image}" alt="${product.title}" onerror="this.src='https://placehold.co/300x200?text=Laptop'">
+            </div>
+          </a>
           <div class="product-info">
-            <h5 class="product-title" title="${product.title}">${product.title}</h5>
-            <p class="product-subtext" title="${product.subtext}">${product.subtext}</p>
+            <a href="${detailURL}" class="product-card-link text-decoration-none text-dark">
+              <h5 class="product-title" title="${product.title}">${product.title}</h5>
+            </a>
+            <a href="${detailURL}" class="product-card-link text-decoration-none text-dark">
+              <p class="product-subtext" title="${product.subtext}">${product.subtext}</p>
+            </a>
             <div class="product-footer">
               <span class="product-price">${product.price}$</span>
               <button class="shop-btn btn-add-cart" data-id="${product.id}">Shop</button>
