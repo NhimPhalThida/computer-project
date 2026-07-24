@@ -1,4 +1,3 @@
-// Product Detail Logic for CP-Shop
 // Handles loading product details from query string, rendering, and related products list.
 
 const allProducts = [
@@ -53,7 +52,7 @@ window.getProductSpecs = function(product) {
   if (brand === "macbook" || brand === "apple") {
     return [
       "RAM: 8GB / 16GB Unified Memory | SSD: 512GB / 1TB PCIe SSD",
-      "- 14.2\" Liquid Retina XDR display (3024 x 1964) IPS",
+      "- 14.2 Liquid Retina XDR display (3024 x 1964) IPS",
       "- GPU: Apple M3 Chip 10-Core",
       "- Feature: Backlit Magic Keyboard with Touch ID",
       "- OS: macOS Sonoma",
@@ -66,7 +65,7 @@ window.getProductSpecs = function(product) {
   } else if (brand === "dell") {
     return [
       "RAM : DDR5 16GB | SSD : 1TB PCIe",
-      "- 14 \" WUXGA (1920 x 1200) IPS",
+      "- 14  WUXGA (1920 x 1200) IPS",
       "- GPU : AMD Radeon™ Graphics",
       "- Feature : Backlit Chiclet Keyboard",
       "- OS : Windows 11 License",
@@ -80,7 +79,7 @@ window.getProductSpecs = function(product) {
     // HP or default
     return [
       "RAM: DDR5 16GB | SSD: 512GB PCIe NVMe SSD",
-      "- 14\" WUXGA (1920 x 1200) Touchscreen IPS",
+      "- 14 WUXGA (1920 x 1200) Touchscreen IPS",
       "- GPU: Intel Iris Xe Graphics / Intel Arc Graphics",
       "- Feature: 360-degree Hinge, Backlit Keyboard, Pen Support",
       "- OS: Windows 11 License",
